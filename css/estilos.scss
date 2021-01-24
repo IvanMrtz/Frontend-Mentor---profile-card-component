@@ -1,0 +1,95 @@
+:root{
+    --darkCyan:hsl(185, 75%, 39%);
+    --veryDarkblue: hsl(229, 23%, 23%);
+   --darkgrayishblue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%);
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color:var(--darkCyan);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    background-color: white;
+    border-radius: 18px;
+    width: 326px;
+    overflow: hidden;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.075);
+
+    &-header{
+        width: 100%;
+        display:block;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction:column;    
+        align-items: center;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.281);
+        
+        &-img{
+            border: 5px solid white;
+            border-radius: 50%;
+            margin-top: calc(-48px - 5px);
+            background-color: white;
+        }
+
+        &-title{
+            margin-top: 2rem;
+            font-size: 1.8rem;
+            color:var(--veryDarkblue);
+            &-age{
+                margin-left: 0.6rem;
+                color:var(--darkGray);
+                font-weight:400;
+            }
+        }
+
+        &-city{
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            color:var(--darkGray)
+        }
+    }
+
+    &-footer{
+        display:flex;
+        justify-content: space-evenly;
+        
+        &-social{
+            margin-top:11px;
+            margin-bottom: 11px;
+            text-align: center;
+            h2{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            h3{
+                margin-top: -9px;
+                letter-spacing: 2px;
+                font-size: 11px;
+                color:var(--darkGray);
+                font-weight: lighter;
+            }
+        }
+    }
+}
